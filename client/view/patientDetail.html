@@ -1,0 +1,79 @@
+<div class="col-lg-12">
+	<form class="card">
+	  <div class="card-body">
+		<h3 class="card-title">Patient Details</h3>
+		<div class="row">
+		  <div class="col-md-4">
+				<div class="form-group">
+					<label class="form-label">Patient ID</label>
+					<input type="text" class="form-control" ng-model="PatientID" ng-disabled="true">
+				</div>
+		  </div>
+		  <div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">First Name</label>
+					<input type="text" class="form-control" ng-model="FirstName" placeholder="Enter firsr name">
+				</div>
+		  </div>
+		  <div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Last Name</label>
+					<input type="text" class="form-control" ng-model="LastName" placeholder="Enter last name">
+				</div>
+		  </div>
+		  <div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">SSN</label>
+					<input type="text" class="form-control" ng-model="Ssn" placeholder="Enter ssn">
+				</div>
+		  </div>
+		  <!-- <div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Consent To</label>
+					<input type="text" ng-model="Consent" class="form-control">
+				</div>
+			</div> -->
+		</div>
+		<h3 class="card-title">Birth Details</h3>
+		<div class="row">
+		  <div class="col-md-4">
+				<div class="form-group">
+					<label class="form-label">Date Of Birth</label>
+					<input type="text" class="form-control" ng-model="Dob" placeholder="Enter date of birth" jqdatepicker>
+				</div>
+		  </div>
+		  <div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Place Of Birth</label>
+					<input type="text" class="form-control" ng-model="Pob" placeholder="Enter place of birth">
+				</div>
+			</div>
+		</div>
+			<h3 class="card-title">Contact Details</h3>
+			<div class="row">
+		  <div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Email</label>
+					<input type="email" class="form-control" ng-model="EmailID" placeholder="Enter email" ng-disabled="true">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Mobile Phone</label>
+					<input type="text" class="form-control" ng-model="MobilePhone" placeholder="Enter nobile phone number">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Home Phone</label>
+					<input type="text" class="form-control" ng-model="HomePhone" placeholder="Enter home phone number">
+				</div>
+		  </div>
+
+		</div>
+	  </div>
+	  <div class="card-footer text-right">
+		<button type="submit" class="btn btn-primary" ng-click="updatePatient()">Update Profile</button>
+	  </div>
+	</form>
+</div>

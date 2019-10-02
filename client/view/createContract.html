@@ -1,0 +1,67 @@
+<div class="col-lg-12">
+	<form id="patientcontract" name="patientcontract" class="card">
+	  <div class="card-body">
+		<h3 class="card-title">Contract Details....</h3>
+		<!-- <div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Consent To</label>
+					<select class="form-control custom-select" ng-model="">
+						<option value=""></option>
+						<option value=""></option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="form-label">Care Type</label>
+					<select class="form-control custom-select" ng-model="">
+						<option value=""></option>
+						<option value=""></option>
+					</select>
+				</div>
+			</div>
+		</div> -->
+		<div class="card-footer text-right">
+			<button type="submit" class="btn btn-primary" ng-click="createContract()">Create Contract</button>
+		</div>
+		<div class="card-content table-responsive">
+			<table class="table export-table">
+				<thead class="text-primary">
+					<th>Contract ID</th>
+					<th>Patient ID</th>
+					<th>Care Code</th>
+					<th>Provider Name</th>
+					<th>Contract Date</th>
+					<th>Contract Status</th>
+					<th>Charge Amount</th>
+					<th>Charge unit</th>
+					<th>Authorize Medical Records</th>
+					<th></th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="contract in contractList">
+						<td>{{contract.ContractID}}</td>
+						<td>{{contract.PatientID}}</td>
+						<td><select class="form-control custom-select" ng-model="contract.CareCode">
+							<option value="CCD1">Care 1</option>
+							<option value="CCD2">Care 2</option>
+						</select></td>
+						<td><select class="form-control custom-select" ng-model="contract.PhysicianID">
+							<option value="PHYS1">Apollo</option>
+							<option value="PHYS2">Fortis</option>
+						</select></td>
+						<td>{{contract.ContractDate}}</td>
+						<td>{{contract.ContractStatus}}</td>
+						<td>{{contract.ChargeAmount}}</td>
+						<td>{{contract.ChargeUnit}}</td>
+						<td><select class="form-control custom-select" ng-model="contract.AuthorizeContract">
+							<option value="true">YES</option>
+							<option value="false">NO</option>
+						</select></td>
+						<td><button type="submit" class="btn btn-primary" ng-click="saveContract(contract)">Save</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	  </div>
+	</form>
+</div>

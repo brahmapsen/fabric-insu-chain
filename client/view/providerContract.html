@@ -1,0 +1,113 @@
+<div class="col-lg-12">
+	<form class="card">
+	  <div class="card-body">
+		<h3 class="card-title">Contract Details</h3>
+		<div class="card-content table-responsive">
+			<table class="table export-table">
+				<thead class="text-primary">
+					<th>Contract ID</th>
+					<th>Patient ID</th>
+					<th>Care Code</th>
+					<th>Physician ID</th>
+					<th>Contract Date</th>
+					<th>Contract Status</th>
+					<th>Charge Amount</th>
+					<th>Charge unit</th>
+					<th>Authorize Medical Record</th>
+					<th></th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="contract in contractList">
+						<td ng-click="showPatientDetail(contract.PatientID,contract.AuthorizeContract)"><a href="#">{{contract.ContractID}}</a></td>
+						<td>{{contract.PatientID}}</td>
+						<td>{{contract.CareCode}}</td>
+						<td>{{contract.PhysicianID}}</td>
+						<td>{{contract.ContractDate}}</td>
+						<td>{{contract.ContractStatus}}</td>
+						<td><input type="text" class="form-control" ng-model="contract.ChargeAmount" placeholder="Enter amount"></td>
+						<td><input type="text" class="form-control" ng-model="contract.ChargeUnit" placeholder="Enter unit"></td>
+						<td>{{contract.AuthorizeContract}}</td>
+						<td><button type="submit" class="btn btn-primary" ng-click="saveContract(contract)">Save</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	  </div>
+	</form>
+</div>
+
+<div class="col-lg-12" ng-show="showPatient">
+	<form class="card">
+	  <div class="card-body">
+		<h3 class="card-title">Patient Details</h3>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="form-label">Patient ID</label>
+					<input type="text" class="form-control" ng-model="patientDetail[0].Record.PatientID" ng-disabled="true">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">First Name</label>
+					<input type="text" class="form-control" ng-model="patientDetail[0].Record.FirstName" ng-disabled="true">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Last Name</label>
+					<input type="text" class="form-control" ng-model="patientDetail[0].Record.LastName" ng-disabled="true">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">SSN</label>
+					<input type="text" class="form-control" ng-model="patientDetail[0].Record.Ssn" ng-disabled="true">
+				</div>
+			</div>
+		  <!-- <div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Consent To</label>
+					<input type="text" ng-model="Consent" class="form-control">
+				</div>
+			</div> -->
+		</div>
+		<h3 class="card-title">Birth Details</h3>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="form-label">Date Of Birth</label>
+					<input type="text" class="form-control" ng-model="patientDetail[0].Record.DateOfBirth" ng-disabled="true" >
+				</div>	
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Place Of Birth</label>
+					<input type="text" class="form-control" ng-model="patientDetail[0].Record.PlaceOfBirth" ng-disabled="true">
+				</div>
+			</div>
+		</div>
+		<h3 class="card-title">Contact Details</h3>
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Email</label>
+					<input type="email" class="form-control" ng-model="patientDetail[0].Record.EmailID" ng-disabled="true">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Mobile Phone</label>
+					<input type="text" class="form-control" ng-model="patientDetail[0].Record.MobilePhone" ng-disabled="true">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Home Phone</label>
+					<input type="text" class="form-control" ng-model="patientDetail[0].Record.HomePhone" ng-disabled="true">
+				</div>
+			</div>
+		</div>
+	  </div>
+	</form>
+</div>

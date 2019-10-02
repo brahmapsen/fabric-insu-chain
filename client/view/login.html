@@ -1,0 +1,109 @@
+<!-- -------------- Login Page ------------ -->
+<div class="page login-body" ng-show="showLogin">
+	<div class="page-single">
+		<div class="container">
+			<div class="row">
+				<div class="col col-login mx-auto">
+					<!-- <div class="text-center mb-6">
+						<img src="./demo/brand/tabler.svg" class="h-6" alt="">
+					</div> -->
+					<form class="card">
+						<div class="card-body p-6">
+							<div class="card-title">Login to your account</div>
+							<div class="form-group">
+								<label class="form-label">Email address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="registeredEmail" placeholder="Enter email">
+							</div>
+							<div class="form-group">
+								<label class="form-label">
+									Password
+									<a href="./forgot-password.html" class="float-right small">I forgot password</a>
+								</label>
+								<input type="password" class="form-control" id="exampleInputPassword1" ng-model="registeredPwd" placeholder="Password">
+							</div>
+							<div class="form-group">
+								<input type="radio" name="selector" ng-model="selector" ng-value="true"> Provider
+								<input type="radio" name="selector" ng-model="selector" ng-value="false"> Patient
+							</div>
+							<div class="form-group">
+								<label class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" />
+									<span class="custom-control-label">Remember me</span>
+								</label>
+							</div>
+							<div class="form-footer">
+								<button type="submit" class="btn btn-primary btn-block" ng-click="loginUser()">Sign in</button>
+							</div>
+						</div>
+					</form>
+					<div class="text-center text-muted">
+						Don't have account yet? <a href="#" class="a-tag" ng-click="showRegisterScreen()">Sign up</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ----------------- Register Page ---------------- -->
+<div class="page login-body" ng-show="showRegister">
+	<div class="page-single">
+		<div class="container">
+			<div class="row">
+				<div class="col col-login mx-auto">
+					<!-- <div class="text-center mb-6">
+						<img src="./demo/brand/tabler.svg" class="h-6" alt="">
+					</div> -->
+					<form class="card">
+						<div class="card-body p-6">
+							<div class="card-title">Create new account</div>
+							<div class="form-group">
+								<label class="form-label">First-Name</label>
+								<input type="text" class="form-control" ng-model="firstName" placeholder="Enter first name">
+							</div>
+							<div class="form-group">
+								<label class="form-label">Last-Name</label>
+								<input type="text" class="form-control" ng-model="lastName" placeholder="Enter last name">
+							</div>
+							<div class="form-group">
+								<label class="form-label">Email address</label>
+								<input type="email" class="form-control" ng-model="email" placeholder="Enter email">
+							</div>
+							<div class="form-group">
+								<label class="form-label">Password</label>
+								<input type="password" class="form-control" ng-model="pwd" placeholder="Password">
+							</div>
+							<div class="form-group">
+								<label class="form-label">Contact Number</label>
+								<input type="string" class="form-control" ng-model="contact" placeholder="Enter contact number">
+							</div>
+							<div class="form-group">
+								<input type="radio" name="selector" ng-model="selector" ng-value="true"> Provider
+								<input type="radio" name="selector" ng-model="selector" ng-value="false"> Patient
+							</div>
+							<div class="form-group" ng-show="selector">
+								<label class="form-label">Provider-Name</label>
+								<!-- <input type="text" class="form-control" ng-model="providerName" placeholder="Enter provider name"> -->
+								<select class="form-control custom-select" ng-model="physicianID">
+									<option value="PHYS1">Apollo</option>
+									<option value="PHYS2">Fortis</option>
+								</select>
+							</div>
+							<!-- <div class="form-group">
+								<label class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" />
+									<span class="custom-control-label">Agree the <a href="terms.html">terms and policy</a></span>
+								</label>
+							</div> -->
+							<div class="form-footer">
+								<button type="submit" class="btn btn-primary btn-block" ng-click="registerUser()">Create new account</button>
+							</div>
+						</div>
+					</form>
+					<div class="text-center text-muted">
+						Already have account? <a href="#" class="a-tag" ng-click="showLoginScreen()">Sign in</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

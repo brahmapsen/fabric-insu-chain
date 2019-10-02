@@ -1,0 +1,125 @@
+<div class="col-lg-12">
+	<form class="card">
+	  <div class="card-body">
+		<h3 class="card-title">Physician Details</h3>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="form-label">Provider Name</label>
+					<input type="text" class="form-control" ng-model="ProviderName" ng-disabled="true">
+				</div>
+			</div>
+		  <div class="col-md-4">
+				<div class="form-group">
+					<label class="form-label">Physician ID</label>
+					<input type="text" class="form-control" ng-model="PhysicianID" ng-disabled="true">
+				</div>
+		  </div>
+		  <div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">First Name</label>
+					<input type="text" class="form-control" ng-model="FirstName" placeholder="Enter firsr name">
+				</div>
+		  </div>
+		  <div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Last Name</label>
+					<input type="text" class="form-control" ng-model="LastName" placeholder="Enter last name">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Gender</label>
+					<select class="form-control custom-select" ng-model="Gender">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+		  </div>
+		  <div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">SSN</label>
+					<input type="text" class="form-control" ng-model="Ssn" placeholder="Enter ssn">
+				</div>
+		  </div>
+		</div>
+		
+		<h3 class="card-title">Contact Details</h3>
+		<div class="row">
+		  <div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Email</label>
+					<input type="email" class="form-control" ng-model="EmailID" placeholder="Enter email" ng-disabled="true">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Mobile Phone</label>
+					<input type="text" class="form-control" ng-model="MobilePhone" placeholder="Enter nobile phone number">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Home Phone</label>
+					<input type="text" class="form-control" ng-model="HomePhone" placeholder="Enter home phone number">
+				</div>
+			</div>
+		</div>
+
+		<h3 class="card-title">Address Details</h3>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="form-label">Street Address</label>
+					<input type="text" class="form-control" ng-model="StreetAddress" placeholder="Enter street address">
+				</div>	
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">City</label>
+					<input type="text" class="form-control" ng-model="City" placeholder="Enter city">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">State</label>
+					<input type="text" class="form-control" ng-model="State" placeholder="Enter state">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Country</label>
+					<input type="text" class="form-control" ng-model="Country" placeholder="Enter country">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="form-group">
+					<label class="form-label">Zip-Code</label>
+					<input type="text" class="form-control" ng-model="Zipcode" placeholder="Enter zipcode">
+				</div>
+		    </div>
+		</div>
+		  <!-- <div class="col-md-5">
+			<div class="form-group">
+			  <label class="form-label">Country</label>
+			  <select class="form-control custom-select">
+				<option value="">Germany</option>
+			  </select>
+			</div>
+		  </div>
+		  <div class="col-md-12">
+			<div class="form-group mb-0">
+			  <label class="form-label">About Me</label>
+			  <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">Oh so, your weak rhyme
+You doubt I'll bother, reading into it
+I'll probably won't, left to my own devices
+But that's the difference in our opinions.</textarea>
+			</div>
+		  </div> -->
+		</div>
+	  </div>
+	  <div class="card-footer text-right">
+		<button type="submit" class="btn btn-primary" ng-click="updateProvider()">Update Profile</button>
+	  </div>
+	</form>
+</div>

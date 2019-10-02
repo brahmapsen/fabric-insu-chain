@@ -1,0 +1,21 @@
+{
+   "host":"localhost",
+   "port":"4000",
+   "jwt_expiretime": "259200000",
+   "channelName":"channel1",
+   "contract"   :"contract",
+   "userAuth"   :"userauth",
+   "Org1"       : "peer0.org1.healthchain.com",
+   "Org2"       : "peer0.org2.healthchain.com",
+   "provider"   : "peer0.org2.healthchain.com",
+   "patient"    : "peer0.org1.healthchain.com",
+   "orgname"    : ["peer0.org1.healthchain.com","peer0.org2.healthchain.com"],
+   "CC_SRC_PATH":"../artifacts",
+   "eventWaitTime":"30000",
+   "admins":[
+      {
+         "username":"admin",
+         "secret":"adminpw"
+      }
+   ]
+}

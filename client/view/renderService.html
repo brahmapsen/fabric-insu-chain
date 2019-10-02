@@ -1,0 +1,31 @@
+<div class="col-lg-12">
+	<form class="card">
+	  <div class="card-body">
+		<h3 class="card-title">Service Rendering Details</h3>
+		<div class="card-content table-responsive">
+			<table class="table export-table">
+				<thead class="text-primary">
+					<th>Contract ID</th>
+					<th>Patient ID</th>
+					<th>Care Code</th>
+					<th>Physician ID</th>
+					<th>Service Date</th>
+					<th>Service Status</th>
+					<th></th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="contract in contractList">
+						<td>{{contract.ContractID}}</td>
+						<td>{{contract.PatientID}}</td>
+						<td>{{contract.CareCode}}</td>
+						<td>{{contract.PhysicianID}}</td>
+						<td><input type="text" class="form-control" ng-model="contract.ContractDate" placeholder="Enter Service Date:"></td>
+						<td>{{contract.ContractStatus}}</td>
+						<td><button type="submit" class="btn btn-primary" ng-click="savePhyService(contract)">Save</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	  </div>
+	</form>
+</div>
